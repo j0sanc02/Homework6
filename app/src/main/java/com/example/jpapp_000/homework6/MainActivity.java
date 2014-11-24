@@ -51,6 +51,7 @@ public class MainActivity extends Activity implements broadcastIntent {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
 
+<<<<<<< HEAD
         Button button = (Button)findViewById(R.id.AddFragmentButton);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +60,28 @@ public class MainActivity extends Activity implements broadcastIntent {
             }
         });
 
+=======
+        Button button = (Button) findViewById(R.id.AddButton);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                EditText editText = (EditText) findViewById(R.id.editText);
+                String text = editText.getText().toString();
+                ParseObject testObject = new ParseObject("ColorClass");
+                testObject.put("Color", text);
+                testObject.saveInBackground();
+                editText.setText("");
+
+                //Toast.makeText(context, string.job_finished,Toast.LENGTH_SHORT).show();
+
+                //InputMethodManager imm = (InputMethodManager)getSystemService(
+                //Context.INPUT_METHOD_SERVICE);
+                //imm.hideSoftInputFromWindow(editText.getWindowToken(),0);
+            }
+
+        });
+>>>>>>> origin/master
         return true;
     }
 

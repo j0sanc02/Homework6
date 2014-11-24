@@ -18,10 +18,23 @@
             android:id="@+id/button"
             android:layout_gravity="center_horizontal" />
 
+<<<<<<< HEAD
 
 
         <Button
             android:id="@+id/AddFragmentButton"
+=======
+        <EditText
+            android:layout_width="209dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:layout_below="@id/button"
+            />
+
+        <Button
+            android:id="@+id/AddButton"
+>>>>>>> origin/master
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Add Color"
@@ -33,7 +46,11 @@
             android:layout_width="match_parent"
             android:layout_height="248dp"
             android:id="@+id/listView2"
+<<<<<<< HEAD
             android:layout_below="@id/AddFragmentButton" />
+=======
+            android:layout_below="@id/AddButton" />
+>>>>>>> origin/master
 
 
 </RelativeLayout>
