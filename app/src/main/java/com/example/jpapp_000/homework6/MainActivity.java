@@ -16,6 +16,8 @@ import android.view.ViewGroup;
 import android.os.Build;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import com.parse.ParseException;
@@ -48,6 +50,15 @@ public class MainActivity extends Activity implements broadcastIntent {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+
+        Button button = (Button)findViewById(R.id.AddFragmentButton);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getFragmentManager().beginTransaction().replace(R.id.container,new AddColorFragment()).commit();
+            }
+        });
+
         return true;
     }
 
@@ -133,20 +144,9 @@ public class MainActivity extends Activity implements broadcastIntent {
             listview.setAdapter(adapter);
             // Close the progressdialog
             mProgressDialog.dismiss();
-            // Capture button clicks on ListView items
-            /*listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view,
-                                        int position, long id) {
-                    // Send single item click data to SingleItemView Class
-                    Intent i = new Intent(MainActivity.this,
-                            DetailsActivity.class);
-                    // Pass data "CarMake" followed by the position
-                    i.putExtra("CarMake", ob.get(position).getString("CarMake"));
-                    // Open SingleItemView.java Activity
-                    startActivity(i);
-                }
-            });*/
+
+
+
         }
 
 
