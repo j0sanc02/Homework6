@@ -1,7 +1,6 @@
 package com.example.jpapp_000.homework6;
 
 import android.app.Activity;
-import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -13,11 +12,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Build;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
 
 import com.parse.ParseException;
@@ -51,7 +47,7 @@ public class MainActivity extends Activity implements broadcastIntent {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
 
-<<<<<<< HEAD
+
         Button button = (Button)findViewById(R.id.AddFragmentButton);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,8 +56,8 @@ public class MainActivity extends Activity implements broadcastIntent {
             }
         });
 
-=======
-        Button button = (Button) findViewById(R.id.AddButton);
+
+       /* Button button = (Button) findViewById(R.id.AddButton);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,8 +76,8 @@ public class MainActivity extends Activity implements broadcastIntent {
                 //imm.hideSoftInputFromWindow(editText.getWindowToken(),0);
             }
 
-        });
->>>>>>> origin/master
+        });*/
+
         return true;
     }
 
